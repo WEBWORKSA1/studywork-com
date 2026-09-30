@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scholarship Finder — Fully Funded & Partial Scholarships for International Students | StudyWork</title>
+<meta name="description" content="Search 31+ official government and university scholarships for international students by destination, level and funding type. Save a shortlist and go straight to the official site.">
+<meta name="keywords" content="scholarships for international students, fully funded scholarships, Chevening, Fulbright, DAAD, Erasmus Mundus, masters scholarships abroad">
+<link rel="canonical" href="https://studywork.com/scholarships.html">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#4338ca">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWork">
+<meta property="og:title" content="Scholarship Finder — Fully Funded & Partial Scholarships for International Students | StudyWork">
+<meta property="og:description" content="Search 31+ official government and university scholarships for international students by destination, level and funding type. Save a shortlist and go straight to the official site.">
+<meta property="og:url" content="https://studywork.com/scholarships.html">
+<meta property="og:image" content="https://studywork.com/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem("sw_theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "StudyWork", "url": "https://studywork.com", "logo": "https://studywork.com/assets/img/logo.svg"}, {"@type": "WebSite", "name": "StudyWork", "url": "https://studywork.com", "potentialAction": {"@type": "SearchAction", "target": "https://studywork.com/scholarships.html?q={query}", "query-input": "required name=query"}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar" role="note">Contact, if you are interested in this <a href="https://web.works/contact" target="_blank" rel="noopener">website / domain name / Sponsorship / Advertisement / Partnership</a></div>
+<header class="site-header"><div class="container nav">
+  <a class="logo" href="index.html" aria-label="StudyWork home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4338ca"/><stop offset="1" stop-color="#0f9d94"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M9 14.5 20 9l11 5.5-11 5.5z" fill="#fff"/><path d="M13 17.5v5.2c0 1.8 3.1 3.3 7 3.3s7-1.5 7-3.3v-5.2l-7 3.5z" fill="#fff" opacity=".85"/><rect x="15" y="27.5" width="10" height="5.5" rx="1.6" fill="#fde68a"/><rect x="18" y="26" width="4" height="2.4" rx="1" fill="none" stroke="#fde68a" stroke-width="1.2"/></svg><span>Study<b>Work</b></span></a>
+  <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+  <ul class="nav-links" id="nav-links"><li><a href="countries.html">Countries</a></li><li><a href="scholarships.html">Scholarships</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="tools.html">Tools</a></li><li><a href="guides.html">Guides</a></li><li><a href="videos.html">Videos</a></li><li><a href="contests.html">Contests</a></li><li><a href="donate.html">Support</a></li>
+    <li><button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></li>
+    <li class="nav-cta"><a class="btn btn-primary btn-sm" href="counselling.html">Free Counselling</a></li>
+  </ul>
+</div></header>
+<main id="main">
+
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="index.html">Home</a> / Scholarships</div>
+  <h1>Scholarship finder</h1>
+  <p class="lead">Official, well-established scholarships only — every listing links to the program's own website so you always see the current deadline and eligibility.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="container">
+  <div class="list-controls card" style="padding:14px">
+    <label class="sr-only" for="sch-q">Search</label><input id="sch-q" type="search" placeholder="Search by name, country, eligibility…">
+    <label class="sr-only" for="sch-country">Destination</label><select id="sch-country"></select>
+    <label class="sr-only" for="sch-level">Level</label><select id="sch-level"><option value="">All levels</option><option>Bachelor's</option><option>Master's</option><option>PhD</option><option>Research</option></select>
+    <label class="sr-only" for="sch-fund">Funding</label><select id="sch-fund"><option value="">Full & partial</option><option>Full</option><option>Partial</option></select>
+    <label class="check" style="align-self:center;margin:0"><input type="checkbox" id="sch-saved"> ★ Saved only</label>
+  </div>
+  <p class="small muted" id="sch-count" aria-live="polite"></p>
+  <div class="grid g3" id="sch-list"></div>
+</div></section>
+
+<div class="ad-slot" data-slot="inContent" aria-label="Advertisement"><span class="ad-label">Advertisement</span><div class="ad-inner">Ad space · <a href="advertise.html">&nbsp;advertise with StudyWork</a></div></div>
+
+<section class="alt"><div class="container split">
+  <div>
+    <span class="eyebrow">Scholarship matching</span>
+    <h2>Get scholarships matched to your profile</h2>
+    <p class="muted">Share your grades, field and budget. We'll send a shortlist of scholarships you are realistically eligible for, with deadlines and application tips.</p>
+    <a class="btn btn-ghost" href="guides/scholarship-application-strategy.html">Read: How to win scholarships →</a>
+  </div>
+  <div class="form-card">
+    <form class="sw-form form" data-subject="Scholarship matching request" data-ok="Thanks! Your scholarship shortlist request is in — expect an email within 2 business days.">
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row"><div><label for="sm-name">Name</label><input id="sm-name" name="name" required></div><div><label for="sm-email">Email</label><input id="sm-email" type="email" name="email" required></div></div>
+      <div class="row"><div><label for="sm-level">Level</label><select id="sm-level" name="level"><option>Bachelor's</option><option>Master's</option><option>PhD</option></select></div><div><label for="sm-field">Field</label><input id="sm-field" name="field" required></div></div>
+      <div class="row"><div><label for="sm-grades">Grades</label><input id="sm-grades" name="grades" placeholder="e.g. 3.6 GPA / 82%"></div><div><label for="sm-nat">Nationality</label><input id="sm-nat" name="nationality" required></div></div>
+      <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted about scholarships (<a href="privacy.html">privacy</a>).</label>
+      <button class="btn btn-primary" type="submit">Match me with scholarships</button>
+      <div class="form-msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <h2>Scholarship FAQs</h2>
+  <details class="faq"><summary>Do you charge to apply?</summary><p>No. StudyWork never charges students, and legitimate scholarships never ask for an application "fee" paid to a third party. If anyone asks you to pay to receive a scholarship, treat it as a scam.</p></details>
+  <details class="faq"><summary>Are deadlines listed here?</summary><p>Deadlines change every cycle, so we link to each official page instead of copying dates that go stale. Many major programs open 9–12 months before the start of study.</p></details>
+  <details class="faq"><summary>Can I list my scholarship?</summary><p>Yes — universities, foundations and companies can <a href="advertise.html#partners">submit or sponsor a listing</a>.</p></details>
+</div></section>
+
+<section><div class="container"><div class="band reveal"><div class="split">
+  <div><h2>Get the weekly StudyWork brief</h2><p>New scholarships, visa and work-rule changes, student-job openings and contest alerts — one short email every week. Free forever.</p></div>
+  <form class="sw-form form" data-subject="Newsletter subscription" data-ok="Subscribed! Watch your inbox for the next StudyWork brief.">
+    <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="row"><div><label for="nw-name" style="color:#dfe3ff">First name</label><input id="nw-name" name="name" required></div><div><label for="nw-email" style="color:#dfe3ff">Email</label><input id="nw-email" type="email" name="email" required></div></div>
+    <div><label for="nw-int" style="color:#dfe3ff">I'm most interested in</label><select id="nw-int" name="interest"><option>Scholarships</option><option>Part-time jobs & internships</option><option>Visa & work-rule updates</option><option>Contests & prizes</option><option>Everything</option></select></div>
+    <button class="btn btn-amber" type="submit">Subscribe free</button>
+    <div class="form-msg" role="status" aria-live="polite"></div>
+  </form>
+</div></div></div></section>
+
+</main>
+<script src="assets/js/layout.js" data-root=""></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
