@@ -1,0 +1,90 @@
+<!--
+title: Free Student Calculators — Earnings, Budget, Loan EMI, GPA & ROI
+description: Free calculators for international students: legal part-time earnings, funding gap, education loan EMI, GPA/CGPA converter, study-abroad ROI and a work-rights checker.
+keywords: student earnings calculator, study abroad budget calculator, education loan EMI calculator, CGPA to GPA converter, study abroad ROI
+-->
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="index.html">Home</a> / Tools</div>
+  <h1>Free study & work calculators</h1>
+  <p class="lead">Run the numbers before you commit. No sign-up needed — results appear instantly and nothing is stored.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="container">
+  <div class="tool-tabs" role="tablist">
+    <button type="button" role="tab" data-tool="tool-rights">✅ Work rights</button>
+    <button type="button" role="tab" data-tool="tool-earn">💵 Earnings</button>
+    <button type="button" role="tab" data-tool="tool-budget">📊 Funding gap</button>
+    <button type="button" role="tab" data-tool="tool-loan">🏦 Loan EMI</button>
+    <button type="button" role="tab" data-tool="tool-gpa">🎓 GPA converter</button>
+    <button type="button" role="tab" data-tool="tool-roi">📈 ROI / payback</button>
+  </div>
+
+  <div class="tool" id="tool-rights"><div class="split" style="align-items:start">
+    <form class="form-card form" onsubmit="return false">
+      <h2 style="font-size:1.4rem">Work-rights checker</h2>
+      <div><label for="r-country">Destination</label><select id="r-country" name="country" data-countries></select></div>
+      <div><label for="r-ft">Will you study full-time?</label><select id="r-ft" name="fulltime"><option value="yes">Yes, full-time</option><option value="no">No, part-time</option></select></div>
+      <div><label for="r-lvl">Course level</label><select id="r-lvl" name="level"><option value="degree">Degree level or higher</option><option value="below">Below degree level</option></select></div>
+    </form>
+    <div class="card" id="rights-out" aria-live="polite"></div>
+  </div></div>
+
+  <div class="tool" id="tool-earn"><div class="split" style="align-items:start">
+    <form class="form-card form" onsubmit="return false">
+      <h2 style="font-size:1.4rem">Part-time earnings estimator</h2>
+      <div><label for="e-country">Destination</label><select id="e-country" name="country" data-countries></select></div>
+      <div class="row"><div><label for="e-wage">Hourly wage (local currency)</label><input id="e-wage" name="wage" type="number" step="0.01" min="0"><span class="small muted" id="wage-note"></span></div><div><label for="e-hours">Hours/week in term</label><input id="e-hours" name="hours" type="number" min="0" max="60"></div></div>
+      <div class="row"><div><label for="e-tw">Term weeks per year</label><input id="e-tw" name="termweeks" type="number" value="32" min="0" max="52"></div><div><label for="e-bw">Break weeks you'll work</label><input id="e-bw" name="breakweeks" type="number" value="10" min="0" max="20"></div></div>
+      <div class="row"><div><label for="e-bh">Hours/week in breaks</label><input id="e-bh" name="breakhours" type="number" value="35" min="0" max="60"></div><div><label for="e-liv">Living costs / month</label><input id="e-liv" name="living" type="number" min="0"></div></div>
+      <p class="small muted" style="margin:0">Defaults are indicative. Edit wage and living costs for your city.</p>
+    </form>
+    <div class="result" id="earn-out" aria-live="polite"></div>
+  </div></div>
+
+  <div class="tool" id="tool-budget"><div class="split" style="align-items:start">
+    <form class="form-card form" onsubmit="return false">
+      <h2 style="font-size:1.4rem">Funding-gap calculator</h2>
+      <p class="small muted" style="margin:0">Use any single currency throughout.</p>
+      <div class="row"><div><label for="b-t">Tuition per year</label><input id="b-t" name="tuition" type="number" value="25000" min="0"></div><div><label for="b-l">Living costs per month</label><input id="b-l" name="living" type="number" value="1500" min="0"></div></div>
+      <div class="row"><div><label for="b-x">One-time costs (visa, flights, deposit)</label><input id="b-x" name="extras" type="number" value="3000" min="0"></div><div><label for="b-y">Program length (years)</label><input id="b-y" name="years" type="number" value="2" min="1" max="6"></div></div>
+      <div class="row"><div><label for="b-s">Savings / family support (total)</label><input id="b-s" name="savings" type="number" value="30000" min="0"></div><div><label for="b-sc">Scholarships per year</label><input id="b-sc" name="schol" type="number" value="5000" min="0"></div></div>
+      <div><label for="b-w">Part-time income per month</label><input id="b-w" name="work" type="number" value="800" min="0"></div>
+    </form>
+    <div class="result" id="budget-out" aria-live="polite"></div>
+  </div></div>
+
+  <div class="tool" id="tool-loan"><div class="split" style="align-items:start">
+    <form class="form-card form" onsubmit="return false">
+      <h2 style="font-size:1.4rem">Education loan EMI calculator</h2>
+      <div class="row"><div><label for="l-a">Loan amount</label><input id="l-a" name="amount" type="number" value="40000" min="0"></div><div><label for="l-r">Interest rate (% per year)</label><input id="l-r" name="rate" type="number" value="11" step="0.1" min="0"></div></div>
+      <div class="row"><div><label for="l-y">Repayment term (years)</label><input id="l-y" name="years" type="number" value="10" min="1" max="20"></div><div><label for="l-g">Grace / moratorium (months)</label><input id="l-g" name="grace" type="number" value="24" min="0" max="72"></div></div>
+      <p class="small muted" style="margin:0">Assumes interest accrues during the grace period and is capitalised.</p>
+    </form>
+    <div class="result" id="loan-out" aria-live="polite"></div>
+  </div></div>
+
+  <div class="tool" id="tool-gpa"><div class="split" style="align-items:start">
+    <form class="form-card form" onsubmit="return false">
+      <h2 style="font-size:1.4rem">GPA / CGPA / percentage converter</h2>
+      <div class="row"><div><label for="g-s">Your score</label><input id="g-s" name="score" type="number" value="8.2" step="0.01" min="0"></div><div><label for="g-sc">Scale</label><select id="g-sc" name="scale"><option value="cgpa10">CGPA out of 10</option><option value="pct">Percentage</option><option value="gpa4">GPA out of 4</option><option value="gpa5">GPA out of 5</option></select></div></div>
+    </form>
+    <div class="result" id="gpa-out" aria-live="polite"></div>
+  </div></div>
+
+  <div class="tool" id="tool-roi"><div class="split" style="align-items:start">
+    <form class="form-card form" onsubmit="return false">
+      <h2 style="font-size:1.4rem">Study-abroad ROI & payback</h2>
+      <div class="row"><div><label for="o-c">Total cost of degree</label><input id="o-c" name="cost" type="number" value="60000" min="0"></div><div><label for="o-s">Share of uplift saved (%)</label><input id="o-s" name="saverate" type="number" value="40" min="1" max="100"></div></div>
+      <div class="row"><div><label for="o-b">Salary without degree (per year)</label><input id="o-b" name="before" type="number" value="15000" min="0"></div><div><label for="o-a">Expected salary after (per year)</label><input id="o-a" name="after" type="number" value="55000" min="0"></div></div>
+    </form>
+    <div class="result" id="roi-out" aria-live="polite"></div>
+  </div></div>
+</div></section>
+
+{{AD:inContent}}
+
+<section class="alt"><div class="container split">
+  <div><h2>Want an advisor to check your numbers?</h2><p class="muted">Send us your destination and budget — we'll reply with a funding plan, scholarship matches and lender options.</p><a class="btn btn-primary" href="counselling.html">Get a free funding plan →</a></div>
+  <div class="card"><h3>Embed these tools</h3><p class="small">Bloggers, schools and agents can embed StudyWork calculators for free with attribution. <a href="advertise.html#partners">Ask for embed code</a>.</p></div>
+</div></section>
+{{NEWS}}
